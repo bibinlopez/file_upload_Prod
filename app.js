@@ -26,9 +26,9 @@ app.use(express.static('./public'))
 // app.use(fileUpload())
 app.use(fileUpload({ useTempFiles: true }))
 
-// app.get('/', (req, res) => {
-//    res.send('hi hello')
-// })
+app.get('/', (req, res) => {
+  res.send('hi hello')
+})
 
 app.use('/api/express', expressRoute)
 app.use('/api/product', productRoute)
